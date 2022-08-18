@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <header>
+        <div class="container">     <!-- Create a container -->
+            <div class="nav">       <!-- Now create a container within that -->
+              <h1>Flashcards</h1>   <!-- Create title here -->
+              <div>
+                <button onclick="showCreateCardBox()">New Card</button>   <!-- Create "New Card" and "Delete Card" buttons and give them function -->
+                <button onclick="delFlashcards()">Del Cards</button>      <!-- Call on functions with "onclick" to "showCreate" and "del" -->
+              </div>
+            </div> 
+        </div>
+    </header>
+    <div class="container">
+        <div class="create-box">
+            <h2 style="text-align: center;color:darkslategray">Create Flashcard</h2>
+            <label for="question">Question</label>  <!-- Creates Question Box -->
+            <textarea id="question"></textarea>     <!-- Using <testarea> instead of <input> to give larger text space. Will create "cols" & "rows" with CSS later-->
+            <br>    <!-- Making a line break -->
+            <label for="answer">Question</label>    <!-- Creates Answer Box -->
+            <textarea id="answer"></textarea>
+        </div>
+        
+
+    </div>
+    <script src="flashcards.js"></script>
+</body>
+</html>
