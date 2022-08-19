@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');   /* Copy+Paste from fonts.google.com Also need to C+P CSS rules into the body below */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');   /* Copy+Paste from fonts.google.com Also need to C+P CSS rules into the body below */
 *{      /* First remove default padding and margin from all of the elements. Access them by using the asterix "*" symbol */
     padding: 0;
     margin: 0;
@@ -6,22 +6,22 @@
 }
 
 body{
-    font-family: 'Monoton', cursive;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    background-color: tomato;
+    background-color: whitesmoke;
 }
 
 header{
-    background-color: forestgreen;
+    background-color: white;
 }
 
 button{
     padding: 8px;
     outline: none;
     cursor: pointer;
-    border: 1px solid lightslategrey;
+    border: 1px solid #778899;
     border-radius: 5px;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
 }
 
 button:hover{
@@ -39,7 +39,7 @@ button:hover{
     width: 100%;
     margin: auto;
     padding: 20px 0;
-    background-color: darkgrey;
+    background-color: white;
 }
 
 .nav button{
@@ -52,7 +52,7 @@ button:hover{
     padding: 20px;
     margin-top: 10px;
     border-radius: 5px;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     box-shadow: 0 2px 4px 0  rgba(0, 0, 0, 0.5);
 }
 
@@ -60,7 +60,7 @@ button:hover{
     width: 100%;
     border-radius: 5px;
     font-family: inherit;
-    border: 1px solid lavender;
+    border: 1px solid lightgray;
 }
 
 .create-box button{
@@ -83,11 +83,11 @@ button:hover{
     height: 200px;
     word-wrap: break-word;
     margin: 10px;
-    background-color: aliceblue;
+    background-color: white;
     box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-.flashcards h2{
+.flashcard h2{
     font-size: 1rem;
 }
 

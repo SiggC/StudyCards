@@ -18,17 +18,16 @@ function divMaker(text){
     div.className = 'flashcard';
 
     h2_question.setAttribute('style', "border-top:1px; solid red; padding: 15px; margin-top:30px");
-
     h2_question.innerHTML = text.my_question;
 
-    h2_answer.setAttribute("style",
-    "text-align:center; display:none; color:red");
+    h2_answer.setAttribute("style", "text-align:center; display:none; color:red");
     h2_answer.innerHTML = text.my_answer;
 
     div.appendChild(h2_question);
     div.appendChild(h2_answer);
+    div.appendChild(del);
 
-    div.addEventListener("click", function(){       /* This block allows double click to display the answer */
+    div.addEventListener("click", function() {       /* This block allows double click to display the answer */
         if(h2_answer.style.display == "none")       /* If: answer is not displayed >> */
             h2_answer.style.display = "block";      /* Then: display it */
         else
@@ -45,11 +44,14 @@ function addFlashcard(){
     }
 }
 
-contentArray.push(flashcard_info);              /* Here I add the above call for flashcard to localstorage */
+/* Here I add the above call for flashcard to localstorage */
+/* This line makes the card display */
+/* Here I clear the question and answer cards */
+contentArray.push(flashcard_info);              
 localStorage.setItem('items', JSON.stringify
 (contentArray));
-divMaker(contentArray[contentArray.length - 1]);    /* This line makes the card display */
-question.value = '';                                /* Here I clear the question and answer cards */
+divMaker(contentArray[contentArray.length - 1]);    
+question.value = '';                                
 answer.value = '';
 
 function delFlashcards(){
@@ -63,5 +65,5 @@ function showCreateCardBox(){
 }
 
 function hideCreatBox(){
-    createBox.getElementsByClassName.display = "none";
+    createBox.style.display = "none";
 }
