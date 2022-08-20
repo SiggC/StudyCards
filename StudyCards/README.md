@@ -1,2 +1,0 @@
-# StudyCards
-A JavaScript project
