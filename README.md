@@ -1,2 +1,2 @@
 # StudyCards
-Flashcard Project
+A JavaScript project
