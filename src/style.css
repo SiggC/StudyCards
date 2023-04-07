@@ -1,119 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');   /* Copy+Paste from fonts.google.com Also need to C+P CSS rules into the body below */
-*{      /* First remove default padding and margin from all of the elements. Access them by using the asterix "*" symbol */
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    background-color: whitesmoke;
-}
-
-header{
-    background-color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: gray;
 }
 
 button{
-    padding: 8px;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid #778899;
-    border-radius: 5px;
-    background-color: whitesmoke;
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: whitesmoke;
 }
 
 button:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .container{
-    width: 95%;
-    margin: auto;
+  width: 1280px;
+  margin: auto;
 }
 
-.nav{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: auto;
-    padding: 20px 0;
-    background-color: white;
+header{background-color: #fff;}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+  padding: 0 20px;
+  background: #fff;
 }
 
-.nav button{
-    font-family: inherit;
+#header button{
+  font-family: inherit;
+  border: 1px solid red;
 }
 
-.create-box{
-    width: 380px;
-    margin: auto;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    box-shadow: 0 2px 4px 0  rgba(0, 0, 0, 0.5);
+#create_card{
+  display: none;
+  width: 370px;
+  margin:auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: whitesmoke;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
-.create-box textarea{
-    width: 100%;
-    border-radius: 5px;
-    font-family: inherit;
-    border: 1px solid lightgray;
+#create_card h2{
+  color: black;
+  text-align: center;
 }
 
-.create-box button{
-    width: fit-content;
+#create_card textarea{
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+  resize: none;
 }
 
-.flashcards{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: auto;
-    margin-top: 10px;
-    padding: 0 10px;
+#create_card button{width: fit-content;}
+
+#flashcards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
 }
 
 .flashcard{
-    width: 370px;
-    height: 200px;
-    word-wrap: break-word;
-    margin: 10px;
-    background-color: white;
-    box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  position: relative;
 }
 
 .flashcard h2{
     font-size: 1rem;
 }
 
-@media(max-width:768px){        /* Will be activated at 768px */
-    .flashcard{
-        margin: auto;
-    }
-
-    .flashcard{
-        margin-top: 10px;
-        margin-bottom: 10px;        /* Adding space between the flashcards */
-    }
+.fa-minus{
+  top: 3%;
+  right: 2%;
+  position: absolute;
+  color: #1a1a1a;
+  transition: 0.3s ease-out;
 }
 
-@media(max-width:480px){        /* Will be activated at 480px*/
-    .nav{
-        flex-direction: column;
-        align-items: center;
-    }
-    .create-box{
-        width: 100%;
-    }
+.fa-minus:hover{color: red;}
 
-    .flashcard{
-        width: 100%;
-    }
+@media(max-width:1280px){
+  .container{width: 100%;}
 }
 
-/* Video guide: https://www.youtube.com/watch?v=wtqbOFYivxw&t=16s */
+@media(max-width:768px){
+  .flashcard{margin: auto;}
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #create_card{width: 95%;}
+
+  .flashcard{width: 100%;}
+
+}
