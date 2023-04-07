@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="flashcard.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Full Stack Study Cards</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="/index-card.png"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Flashcards</title>
 </head>
-<body>
-    
-    <header>
-        <div class="container">     <!-- Create a container -->
-            <div class="nav">       <!-- Now create a container within that -->
-              <h1>Flashcards</h1>   <!-- Create title here -->
-              <div>
-                <button onclick="showCreateCardBox()">New Card</button>   <!-- Create "New Card" and "Delete Card" buttons && give them function -->
-                <button onclick="delFlashcards()">Del Cards</button>      <!-- Call on functions with "onclick" to "showCreateCardBox()" and "delFlashcards()" -->
-              </div>
-            </div> 
-        </div>
-    </header>
 
-     <div class="container">
-         <div class="create-box">
-             <h2 style="text-align: center;color: black;">Create Flashcard</h2>
-                <label for="question">Question</label>  <!-- Creates Question Box -->
-             <textarea id="question" maxlength="300"></textarea>     <!-- Using <testarea> instead of <input> to give larger text space. Will create "cols" & "rows" with CSS later-->
-             <br>    <!-- Create space between line -->
-              <label for="answer">Answer</label>    <!-- Creates Answer Box -->
-             <textarea id="answer" maxlength="300"></textarea>
-                <div>
-                    <button onclick="addFlashcard()">Save</button>   <!-- Create "Save" button and "Close" button buttons && give them function -->
-                  <button onclick="hideCreateBox()">Close</button>   <!-- Call on functions with "onclick" to "addFlashcard()" and "hadeCreateBox()" -->
-              </div>
-         </div>
-         <div class="flashcards"></div>
+<body>
+
+    <main>
+      
+      <header>
+        <div class="container">
+          <div id="header">
+            <h1>HTML Study Cards</h1>
+            <div>
+              <button id="show_card_box">Add Card</button>
+              <button id="delete_cards">Delete Cards</button>
+            </div>
+          </div>
         </div>
+      </header>
+      
+      <section>
+        <div class="container">
+          <div id="create_card">
+            <h2>Create Flashcard</h2>
+            <label for="question">Question</label>
+            <textarea id="question" maxlength="280"></textarea>
+            <label for="answer" maxlength="280">Answer</label>
+            <br>
+            <textarea id="answer"></textarea>
+            <div>
+              <button id="save_card">Submit</button> <button id="close_card_box">Close</button>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section>
+        <div class="container">
+          <div id="flashcards" >
+          </div>
+        </div>
+      </section>
+  
+    </main>
+    
     <script src="flashcards.js"></script>
-</body>
+  </body>
 </html>
